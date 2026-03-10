@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxf1kp6gr3qn"]
 
-[ext_resource type="Script" uid="uid://daefqhi0l836" path="res://Week-1 (Speedster)/Scenes/char_scripts.gd" id="1_4d1w0"]
+[ext_resource type="Script" uid="uid://daefqhi0l836" path="res://Week-1 (Speedster)/Scripts/char_scripts.gd" id="1_4d1w0"]
 [ext_resource type="Texture2D" uid="uid://coe42ybmqr0r2" path="res://Assets/Sonic_idle.png" id="1_rjfhe"]
 [ext_resource type="Texture2D" uid="uid://beewnjo4y3pyi" path="res://Assets/Sonic_run.png" id="2_4d1w0"]
 
