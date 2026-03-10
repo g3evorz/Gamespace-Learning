@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cff4uo63kpk0m"]
+
+[ext_resource type="PackedScene" uid="uid://cdgc62o4f3uc1" path="res://Week-1 (Speedster)/Scenes/placeholder.tscn" id="1_0nejw"]
+[ext_resource type="PackedScene" uid="uid://bxf1kp6gr3qn" path="res://Week-1 (Speedster)/Scenes/char.tscn" id="2_qvgq0"]
+
+[node name="GameWorld" type="Node2D" unique_id=2044279701]
+
+[node name="Node2D" parent="." unique_id=19802260 instance=ExtResource("1_0nejw")]
+position = Vector2(8, 246)
+scale = Vector2(121.781525, 8.200615)
+
+[node name="CharacterBody2D" parent="." unique_id=205103213 instance=ExtResource("2_qvgq0")]
+scale = Vector2(1.5, 1.5)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1687837105]
+scale = Vector2(0.6666667, 0.6666667)
