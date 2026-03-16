@@ -95,7 +95,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ym4m7"]
 height = 42.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1914142031]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1914142031 groups=["player"]]
 script = ExtResource("1_4d1w0")
 max_speed = 600.0
 

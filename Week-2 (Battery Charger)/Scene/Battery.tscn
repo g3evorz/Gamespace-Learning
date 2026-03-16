@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://pn0704l8r1ag"]
+
+[ext_resource type="Script" uid="uid://cd5xkjm8brvjo" path="res://Week-2 (Battery Charger)/Scripts/battery-scripts.gd" id="1_4jtmn"]
+[ext_resource type="Texture2D" uid="uid://blvqpvnupp0f0" path="res://icon.svg" id="1_5vogh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4jtmn"]
+radius = 17.0
+
+[node name="Battery" type="Area2D" unique_id=690064578]
+script = ExtResource("1_4jtmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=441495721]
+scale = Vector2(0.19140625, 0.19140625)
+texture = ExtResource("1_5vogh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=468290997]
+shape = SubResource("CircleShape2D_4jtmn")
