@@ -10,6 +10,7 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @export var anim_speed_min: float = 0.5
 @export var anim_speed_max: float = 4.0   
+@export var boomerang_scene: PackedScene
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var move_time:float = 0.0
@@ -20,6 +21,10 @@ func _physics_process(delta: float) -> void:
 	_movement_handler(delta)
 	_animation_handler()
 	move_and_slide()
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("Throw"):
+		shoot_boomerang()
 
 func _gravity(delta: float) -> void:
 	if not is_on_floor():
@@ -50,3 +55,14 @@ func _animation_handler() -> void:
 	else:
 		anim.play("Run")
 		anim.speed_scale = lerp(anim_speed_min, anim_speed_max, speed / max_speed)
+		
+func shoot_boomerang() -> void:
+	if boomerang_scene:
+		var boomerang = boomerang_scene.instantiate()
+		boomerang.global_position = global_position
+		
+		if anim.flip_h == true:
+			boomerang.direction = Vector2.LEFT
+		else:
+			boomerang.direction = Vector2.RIGHT
+		get_tree().current_scene.add_child(boomerang)

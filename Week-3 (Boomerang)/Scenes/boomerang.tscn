@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dcmlvte8t1qjy"]
+
+[ext_resource type="Script" uid="uid://cobkh35gdu0pe" path="res://Week-3 (Boomerang)/Scripts/boomerang.gd" id="1_4bxre"]
+[ext_resource type="Texture2D" uid="uid://blvqpvnupp0f0" path="res://icon.svg" id="2_fs8bx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7g6y"]
+
+[node name="Boomerang" type="Area2D" unique_id=33898062]
+script = ExtResource("1_4bxre")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=781873382]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_fs8bx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1362201274]
+shape = SubResource("CircleShape2D_e7g6y")

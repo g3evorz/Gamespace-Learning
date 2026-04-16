@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cxfr6lcjdnurl"]
+
+[ext_resource type="Texture2D" uid="uid://coe42ybmqr0r2" path="res://Assets/Sonic_idle.png" id="1_1m15m"]
+[ext_resource type="Script" uid="uid://ct0j41t5cf047" path="res://Week-3 (Boomerang)/Scripts/enemy.gd" id="1_nvl68"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gp31f"]
+radius = 12.0
+height = 42.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvl68"]
+atlas = ExtResource("1_1m15m")
+region = Rect2(32, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk5nk"]
+atlas = ExtResource("1_1m15m")
+region = Rect2(64, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc4u6"]
+atlas = ExtResource("1_1m15m")
+region = Rect2(96, 0, 32, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_peqd6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvl68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk5nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc4u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk5nk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=2081209093]
+script = ExtResource("1_nvl68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=215227614]
+shape = SubResource("CapsuleShape2D_gp31f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2079231786]
+sprite_frames = SubResource("SpriteFrames_peqd6")
+animation = &"idle"
+frame_progress = 0.7608658

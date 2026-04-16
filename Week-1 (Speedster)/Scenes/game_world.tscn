@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxf1kp6gr3qn" path="res://Week-1 (Speedster)/Scenes/char.tscn" id="2_qvgq0"]
 [ext_resource type="PackedScene" uid="uid://pn0704l8r1ag" path="res://Week-2 (Battery Charger)/Scene/Battery.tscn" id="3_ui45s"]
 [ext_resource type="PackedScene" uid="uid://dv4pkg71t1xh7" path="res://Week-2 (Battery Charger)/Scene/Machine.tscn" id="4_eyv5x"]
+[ext_resource type="PackedScene" uid="uid://cxfr6lcjdnurl" path="res://Week-3 (Boomerang)/Scenes/enemy.tscn" id="5_eyv5x"]
 
 [node name="GameWorld" type="Node2D" unique_id=2044279701]
 
@@ -22,3 +23,7 @@ position = Vector2(81, 152)
 
 [node name="Machine" parent="." unique_id=1685609014 instance=ExtResource("4_eyv5x")]
 position = Vector2(294, 119)
+
+[node name="Enemy" parent="." unique_id=2081209093 instance=ExtResource("5_eyv5x")]
+position = Vector2(609, 134)
+scale = Vector2(1.5, 1.5)
